@@ -20,4 +20,17 @@ public class CollectionUtil {
 		}
 	}
 
+    public static <E> List<E> reverse(List<E> elements) {
+        return Functional.foldRight(
+                elements,
+                new Functional.Folder<E, List<E>>() {
+                    @Override
+                    public List<E> fold(E input, List<E> accumulator) {
+                        accumulator.add(input);
+                        return accumulator;
+                    }
+                },
+                new ArrayList<E>());
+    }
+
 }

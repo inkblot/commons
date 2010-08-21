@@ -89,9 +89,6 @@ public class FunctionalTest {
         assertThat(
                 foldLeft(asList(1, 2, 3, 4, 5), appender),
                 equalTo(asList(1, 2, 3, 4, 5)));
-        assertThat(
-                reverse(asList(1, 2, 3, 4, 5)),
-                equalTo(asList(5, 4, 3, 2, 1)));
     }
 
     @Test

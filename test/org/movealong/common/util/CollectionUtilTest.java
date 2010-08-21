@@ -2,10 +2,12 @@ package org.movealong.common.util;
 
 import java.util.*;
 
-import junit.framework.JUnit4TestAdapter;
-
 import org.junit.Test;
+
+import static java.util.Arrays.asList;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.*;
+import static org.movealong.common.util.CollectionUtil.reverse;
 
 public class CollectionUtilTest {
 
@@ -28,7 +30,11 @@ public class CollectionUtilTest {
 		assertEquals(HashSet.class, CollectionUtil.emptyCopy(Collections.<Object>synchronizedSet(new TreeSet<Object>())).getClass());
 	}
 
-	public static junit.framework.Test suite() {
-		return new JUnit4TestAdapter(CollectionUtilTest.class);
-	}
+    @Test
+    public void _reverse() {
+        assertThat(
+                reverse(asList(1, 2, 3, 4, 5)),
+                equalTo(asList(5, 4, 3, 2, 1)));
+    }
+
 }

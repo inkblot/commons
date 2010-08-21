@@ -88,19 +88,6 @@ public class Functional {
         return new MatcherTest<T>(matcher);
     }
 
-    public static <E> List<E> reverse(List<E> elements) {
-        return foldRight(
-                elements,
-                new Folder<E, List<E>>() {
-                    @Override
-                    public List<E> fold(E input, List<E> accumulator) {
-                        accumulator.add(input);
-                        return accumulator;
-                    }
-                },
-                new ArrayList<E>());
-    }
-
     public static interface Folder<InputType, AccumulatorType> {
         AccumulatorType fold(InputType input, AccumulatorType accumulator);
     }
