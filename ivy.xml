@@ -2,10 +2,10 @@
 <ivy-module version="2.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
-    <info organisation="org.movealong" module="movealong-commons" revision="0.0.5"/>
+    <info organisation="org.movealong" module="movealong-commons" revision="0.0.6"/>
 
     <configurations>
-        <conf name="default" description="Distributed artifacts"/>
+        <conf name="default" extends="runtime" description="Distributed artifacts"/>
         <conf name="compile" description="Libraries that the source code depends on for compilation"/>
         <conf name="runtime" description="Libraries that are required as dependencies at runtime"/>
         <conf name="source" description="Source code for the library"/>
