@@ -9,7 +9,7 @@
         <conf name="compile" description="Libraries that the source code depends on for compilation"/>
         <conf name="runtime" description="Libraries that are required as dependencies at runtime"/>
         <conf name="sources" description="Source code for the library"/>
-        <conf name="doc" description="Documentation for the library"/>
+        <conf name="javadoc" description="Documentation for the library"/>
         <conf name="test" description="Libraries that are required to compile/run the test suite"/>
         <conf name="build" description="Cobertura and its dependencies"/>
     </configurations>
