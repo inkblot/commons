@@ -14,7 +14,6 @@ import java.security.NoSuchAlgorithmException;
  */
 public class StringUtil {
 
-    private StringUtil INSTANCE = new StringUtil();
     private StringUtil() {
     }
 
