@@ -16,6 +16,7 @@ import java.sql.Statement;
  */
 public class DBUtils {
 
+    private DBUtils INSTANCE = new DBUtils();
     private DBUtils() {
     }
 

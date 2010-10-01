@@ -14,7 +14,9 @@ import java.security.NoSuchAlgorithmException;
  */
 public class StringUtil {
 
-    private StringUtil() {}
+    private StringUtil INSTANCE = new StringUtil();
+    private StringUtil() {
+    }
 
     public static String getMD5Base64(String cleartext) {
         try {
